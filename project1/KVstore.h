@@ -8,13 +8,13 @@
 
 class KVStore {
 private:
-    std::unordered_map<std::string, std::string> store;
-    std::mutex mtx;
+    std::unordered_map<std::string, std::string> store;// 存数据的dict
+    std::mutex mtx;// 锁
 
 public:
-    bool put(const std::string& key, const std::string& value);
-    std::optional<std::string> get(const std::string& key);
-    bool remove(const std::string& key);
+    bool put(const std::string& key, const std::string& value); // 写入
+    std::optional<std::string> get(const std::string& key);// 读取
+    bool remove(const std::string& key);// 删除
 };
 
 #endif
